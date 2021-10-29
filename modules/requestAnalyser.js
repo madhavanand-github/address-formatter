@@ -18,16 +18,53 @@ module.exports.isEmpty = function isEmpty(req, res, next) {
 }
 
 // 2. Check - if number of fields are nine
-module.exports.isNumberOfFields = function isNumberOfFields(req, res){
+module.exports.isNumberOfFields = function isNumberOfFields(req, res, next){
 	
 	let count = Object.keys(req.body).length;
 	if(count == 9){
 		console.log('Number of fields : ✅');
-		console.log('All Good 😀');
-		res.send('All Good 😀');
+		next();
 	} 
 	else {
 		console.log('Number of fields : ❌');
 		res.send('Please send 9 fields, you may keep them empty 😕');
 	}
+}
+
+// 3. Check - if fields are correct
+module.exports.isCorrectField = function isCorrectField(req, res){
+
+	let obj = req.body;
+	let flag = true;
+	for(let key in obj) {
+		if (flag) {
+			switch(key){
+				case 'building':
+				case 'street':
+				case 'locality':
+				case 'landmark':
+				case 'vtc':
+				case 'sub-district':
+				case 'district':
+				case 'pincode':
+				case 'state':
+				break;
+				default: flag = false;
+			}
+		} else {
+			break;
+		}
+		
+	}
+	
+	if (flag) {
+		console.log("All fields are correct : ✅");
+		console.log('All Good 😀');
+		res.send('All Good 😀');
+	} else {
+		console.log('Field Incorrect : ❌');
+		res.send('One of your field name is incorrect, check spelling mistake 😕');
+	}
+	
+
 }

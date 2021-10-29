@@ -42,12 +42,14 @@ Address Formatter API for UIDAI Hackathon
 ## Handling of Edge/Boundary Cases
 
 1. Non Availabilty of Some of the Address Components (Like Locality, Sub-District) ✅ (Add GIF)
-2. Repetitive Components.
+2. Repetitive Components. 🔁
 3. Handling of Minor Spelling Mistakes in English.
 4. Availability of Special Characters.
 5. Handling of Local Language Address.
 
-## Security/Features
+## Extra Security/Features
 
 1. Robust Against empty request. ✅ (Add GIF)
 2. Check if fields are correct or complaint. ✅ (Add GIF)
+3. Doesn't process an empty field. ✅ (Add GIF)
+4. Log/Audit of working. ✅ (Add GIF)

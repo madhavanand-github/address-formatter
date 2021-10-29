@@ -32,7 +32,7 @@ module.exports.isNumberOfFields = function isNumberOfFields(req, res, next){
 }
 
 // 3. Check - if fields are correct
-module.exports.isCorrectField = function isCorrectField(req, res){
+module.exports.isCorrectField = function isCorrectField(req, res, next){
 
 	let obj = req.body;
 	let flag = true;
@@ -59,12 +59,41 @@ module.exports.isCorrectField = function isCorrectField(req, res){
 	
 	if (flag) {
 		console.log("All fields are correct : ✅");
-		console.log('All Good 😀');
-		res.send('All Good 😀');
+		next();
 	} else {
 		console.log('Field Incorrect : ❌');
 		res.send('One of your field name is incorrect, check spelling mistake 😕');
 	}
 	
+
+}
+
+// 4. Check - if fields are in-order
+module.exports.isInOrder = function isInOrder(req, res){
+
+	let fields = [ "building", "street", "locality", "landmark", "vtc", "sub-district", "district", "pincode", "state"];
+
+	let obj = req.body;
+	let index = 0;
+	let flag = true;
+	for(key in obj){
+		if(key == fields[index]){
+			index++;
+		}
+		else{
+			flag = false;
+			break;
+		}
+	}
+	
+	if(flag){
+		console.log("Fields are inorder : ✅");
+		console.log("All is well 😀");
+		res.send("All is well 😀");
+	}
+	else{
+		console.log("Fields are not inorder : ❌");
+		res.send("Your fields are not in order 😕");
+	}
 
 }

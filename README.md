@@ -50,3 +50,9 @@ Address Formatter API for UIDAI Hackathon
 
 1. Request Consensus for Security, consistency & Simplicity - Fields & their Order.
 2. Request Analysis - Number of fields
+
+## Future Updates
+
+1. Any number of fields & in any order.
+2. Authorization token when request sent.
+3. 

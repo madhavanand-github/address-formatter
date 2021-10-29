@@ -1,21 +1,21 @@
 let fields = [ "building", "street", "locality", "landmark", "vtc", "sub-district", "district", "pincode", "state"];
 
 let obj = {
-	"building" : "aa",
+	"building" : "",
 	"street" : "aa",
-	"locality" : "a",
+	"locality" : null,
 	"landmark" : "a",
-	"vtc" : "a",
-	"sub-district" : "a",
-	"district" : "a",
-	"pincode" : 144401,
-	"state" : "a"
 }
 
+let fieldsToProcess = [];
+	for(let key in obj){
+		if(obj[key] == "" || obj[key] == null){
+			continue;
+		}
+		fieldsToProcess.push(key);
+	}
 
-let prop = fields[7];
-console.log(typeof(obj[prop])=="number");
-
+console.log(fieldsToProcess);
 
 // 5. Check - type of fields --DUMP--
 function isFieldType(req, res){

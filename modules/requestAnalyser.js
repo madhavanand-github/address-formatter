@@ -34,7 +34,7 @@ module.exports.isNumberOfFields = function isNumberOfFields(req, res, next){
 }
 
 // 3. Check - if fields are correct. GOOD FOR SECURITY
-module.exports.isCorrectField = function isCorrectField(req, res){
+module.exports.isCorrectField = function isCorrectField(req, res, next){
 
 	let obj = req.body;
 	let flag = true;
@@ -61,7 +61,7 @@ module.exports.isCorrectField = function isCorrectField(req, res){
 	
 	if (flag) {
 		console.log("All fields are correct : ✅");
-		res.send("All is well 😀")
+		next();
 		
 	} else {
 		console.log('Field Incorrect : ❌');

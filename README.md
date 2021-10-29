@@ -43,9 +43,10 @@ Address Formatter API for UIDAI Hackathon
 
 1. Non Availabilty of Some of the Address Components (Like Locality, Sub-District) ✅ (Add GIF)
 2. Repetitive Components. 🔁
-3. Handling of Minor Spelling Mistakes in English.
-4. Availability of Special Characters.
-5. Handling of Local Language Address.
+3. Extreme Repetitive Components. 🔁
+4. Handling of Minor Spelling Mistakes in English.
+5. Availability of Special Characters.
+6. Handling of Local Language Address.
 
 ## Extra Security/Features
 

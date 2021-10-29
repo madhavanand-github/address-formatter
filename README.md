@@ -37,22 +37,17 @@ Address Formatter API for UIDAI Hackathon
 }
 ```
 
-> 🛑 In the request body, please ensure keys are in lowercase like `state` instead of `State`.
-> 🛑 There is a provision to add aliases of fields, but for simplicity only one is considered, like for `Street/Road/Lane` only `street` is considered.
+> 🛑 In the request body, any number of fields among above mention fields are accepted in lowercase, e.g. `state` instead of `State`.
 
 ## Handling of Edge/Boundary Cases
 
-1. A request with more number of fields.
-2. Empty Fields
-3. Pincode in address.
+1. Non Availabilty of Some of the Address Components (Like Locality, Sub-District) ✅ (Add GIF)
+2. Repetitive Components.
+3. Handling of Minor Spelling Mistakes in English.
+4. Availability of Special Characters.
+5. Handling of Local Language Address.
 
-## Steps
+## Security/Features
 
-1. Request Consensus for Security, consistency & Simplicity - Fields & their Order.
-2. Request Analysis - Number of fields
-
-## Future Updates
-
-1. Any number of fields & in any order.
-2. Authorization token when request sent.
-3. 
+1. Robust Against empty request. ✅ (Add GIF)
+2. Check if fields are correct or complaint. ✅ (Add GIF)

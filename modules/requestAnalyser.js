@@ -1,4 +1,6 @@
-// 1. Check - If request body is empty.
+let fields = [ "building", "street", "locality", "landmark", "vtc", "sub-district", "district", "pincode", "state"];
+
+// 1. Check - If request body is empty. GOOD FOR SECURITY
 module.exports.isEmpty = function isEmpty(req, res, next) {
 
 	// Separate log of one request from another
@@ -13,11 +15,11 @@ module.exports.isEmpty = function isEmpty(req, res, next) {
 		return;
 	    }
 	}
-	res.send('You made an empty request 😕');
+	res.send('You made an empty request 😆');
 	console.log('Empty Request : ❌');
 }
 
-// 2. Check - if number of fields are nine
+// 2. Check - if number of fields are nine. --UNUSED--
 module.exports.isNumberOfFields = function isNumberOfFields(req, res, next){
 	
 	let count = Object.keys(req.body).length;
@@ -27,12 +29,12 @@ module.exports.isNumberOfFields = function isNumberOfFields(req, res, next){
 	} 
 	else {
 		console.log('Number of fields : ❌');
-		res.send('Please send 9 fields, you may keep them empty 😕');
+		res.send('Please send 9 fields, you may keep them empty 😀');
 	}
 }
 
-// 3. Check - if fields are correct
-module.exports.isCorrectField = function isCorrectField(req, res, next){
+// 3. Check - if fields are correct. GOOD FOR SECURITY
+module.exports.isCorrectField = function isCorrectField(req, res){
 
 	let obj = req.body;
 	let flag = true;
@@ -59,19 +61,18 @@ module.exports.isCorrectField = function isCorrectField(req, res, next){
 	
 	if (flag) {
 		console.log("All fields are correct : ✅");
-		next();
+		res.send("All is well 😀")
+		
 	} else {
 		console.log('Field Incorrect : ❌');
-		res.send('One of your field name is incorrect, check spelling mistake 😕');
+		res.send('One of your field name is incorrect or may have spelling mistake. Check Once 😀');
 	}
 	
 
 }
 
-// 4. Check - if fields are in-order
-module.exports.isInOrder = function isInOrder(req, res){
-
-	let fields = [ "building", "street", "locality", "landmark", "vtc", "sub-district", "district", "pincode", "state"];
+// 4. Check - if fields are in-order --UNUSED--
+module.exports.isInOrder = function isInOrder(req, res, next){
 
 	let obj = req.body;
 	let index = 0;
@@ -88,8 +89,7 @@ module.exports.isInOrder = function isInOrder(req, res){
 	
 	if(flag){
 		console.log("Fields are inorder : ✅");
-		console.log("All is well 😀");
-		res.send("All is well 😀");
+		next();
 	}
 	else{
 		console.log("Fields are not inorder : ❌");

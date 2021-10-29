@@ -5,13 +5,13 @@ app.listen(3000, () => console.log('Server Listenning 👍'));
 app.use(express.json());
 
 // Modules Import
-const {isEmpty, isNumberOfFields, isCorrectField, isInOrder} = require('./modules/requestAnalyser.js');
+const {isEmpty, isCorrectField} = require('./modules/requestAnalyser.js');
 
 // Route Creation
 const mainRouter = express.Router();
 app.use('/format-address', mainRouter);
 mainRouter
 .route('/')
-.post(isEmpty, isNumberOfFields, isCorrectField, isInOrder)
+.post(isEmpty, isCorrectField)
       
 

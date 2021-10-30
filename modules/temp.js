@@ -10,27 +10,13 @@ let fieldType = {
 	"pincode" : "unique",
 	"state" : "unique"
 }
+let uniqueFields = ["building"]
+let finalObj = {
+	"building" : "hard",
+	"street" : "hard",
+};
 
-let obj = {
-	"building" : "",
-	"street" : "aa",
-	"locality" : null,
-	"landmark" : "a",
-}
-
-let hardFields = [];
-let softFields = [];
-let uniqueFields = [];
-
-for(let key in obj){
-	switch(fieldType[key]){
-		case "hard": hardFields.push(key);
-		case "soft": softFields.push(key);
-		case "hard": uniqueFields.push(key);
-	}
-}
-
-console.log(hardFields);
+console.log(finalObj.Building == undefined);
 
 // 5. Check - type of fields --DUMP--
 function isFieldType(req, res){

@@ -19,7 +19,7 @@ let uniqueFields = [];
 let finalObj;
 
 // Creates an array of fields(with non-empty value) needs to be processed.
-module.exports.emptyFieldParser = function emptyFieldParser(req, res){
+module.exports.emptyFieldParser = function emptyFieldParser(req, res, next){
 
 	finalObj = req.body;
 	for(let key in finalObj){
@@ -30,19 +30,21 @@ module.exports.emptyFieldParser = function emptyFieldParser(req, res){
 		nonEmptyFields.push(key);
 	}
 	console.log("Null and Empty Fields Removed : 1️⃣");
-	res.send("All is well 😀");
+	next();
 
 }
 
 // Fields Type Parser
 module.exports.fieldTypeParser = function fieldTypeParser(req, res){
 
-	let obj = req.body;
-	for(let key in obj){
+	for(let key in finalObj){
 		switch(fieldType[key]){
-			case "hard": hardFields.push(key);
-			case "soft": softFields.push(key);
-			case "hard": uniqueFields.push(key);
+			default : console.log(fieldType[key]);
+			case "hard": hardFields.push(key); break;
+			case "soft": softFields.push(key); break;
+			case "unique": uniqueFields.push(key); break;
 		}
 	}
+	console.log("Field Type Parsed : 2️⃣");
+	res.send("All is well 😀")
 }

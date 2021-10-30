@@ -6,13 +6,13 @@ app.use(express.json());
 
 // Modules Import
 const {isEmpty, isCorrectField} = require('./modules/requestAnalyser.js');
-const {emptyFieldParser} = require('./modules/fieldsProcessor');
+const {emptyFieldParser, fieldTypeParser} = require('./modules/fieldsProcessor');
 
 // Route Creation
 const mainRouter = express.Router();
 app.use('/format-address', mainRouter);
 mainRouter
 .route('/')
-.post(isEmpty, isCorrectField, emptyFieldParser)
+.post(isEmpty, isCorrectField, emptyFieldParser, fieldTypeParser)
       
 

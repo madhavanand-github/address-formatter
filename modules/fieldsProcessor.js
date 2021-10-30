@@ -83,3 +83,16 @@ module.exports.uniqueSoft = function uniqueSoft(req, res){
 	console.log(finalObj);
 	res.send("All is well 😀");
 }
+
+
+
+// This normalize the string & split it.
+function stringBreaker(string){
+	string = string.replace(/#/g,"").trim().replace(/\s+/g," ").toLowerCase();
+	return string.split(/[\s,]+/);
+}
+
+// Function to make first letter capital of a string.
+function capitalFL(string) {
+	return string.charAt(0).toUpperCase() + string.slice(1);
+}

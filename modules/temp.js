@@ -1,4 +1,15 @@
-let fields = [ "building", "street", "locality", "landmark", "vtc", "sub-district", "district", "pincode", "state"];
+// Global hard, soft & unique fields
+let fieldType = {
+	"building" : "hard",
+	"street" : "hard",
+	"locality" : "hard",
+	"landmark" : "hard",
+	"vtc" : "soft",
+	"sub-district" : "soft",
+	"district" : "unique",
+	"pincode" : "unique",
+	"state" : "unique"
+}
 
 let obj = {
 	"building" : "",
@@ -7,15 +18,19 @@ let obj = {
 	"landmark" : "a",
 }
 
-let fieldsToProcess = [];
-	for(let key in obj){
-		if(obj[key] == "" || obj[key] == null){
-			continue;
-		}
-		fieldsToProcess.push(key);
-	}
+let hardFields = [];
+let softFields = [];
+let uniqueFields = [];
 
-console.log(fieldsToProcess);
+for(let key in obj){
+	switch(fieldType[key]){
+		case "hard": hardFields.push(key);
+		case "soft": softFields.push(key);
+		case "hard": uniqueFields.push(key);
+	}
+}
+
+console.log(hardFields);
 
 // 5. Check - type of fields --DUMP--
 function isFieldType(req, res){

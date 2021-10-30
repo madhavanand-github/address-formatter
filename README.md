@@ -37,7 +37,7 @@ Address Formatter API for UIDAI Hackathon
 }
 ```
 
-> 🛑 In the request body, any number of fields among above mention fields are accepted in lowercase, e.g. `state` instead of `State`.
+> 🛑 In the request body, any number of fields in any order among above mention fields are accepted in lowercase(`state` instead of `State`)
 
 ## Handling of Edge/Boundary Cases
 

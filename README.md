@@ -30,7 +30,7 @@ Address Formatter API for UIDAI Hackathon
 	"locality" : ,
 	"landmark" : ,
 	"vtc" : ,
-	"sub-district" : ,
+	"subdistrict" : ,
 	"district" : ,
 	"pincode" : ,
 	"state" : 

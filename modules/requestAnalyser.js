@@ -1,4 +1,4 @@
-let fields = [ "building", "street", "locality", "landmark", "vtc", "sub-district", "district", "pincode", "state"];
+let fields = [ "building", "street", "locality", "landmark", "vtc", "subdistrict", "district", "pincode", "state"];
 
 // 1. Check - If request body is empty. GOOD FOR SECURITY
 module.exports.isEmpty = function isEmpty(req, res, next) {
@@ -46,7 +46,7 @@ module.exports.isCorrectField = function isCorrectField(req, res, next){
 				case 'locality':
 				case 'landmark':
 				case 'vtc':
-				case 'sub-district':
+				case 'subdistrict':
 				case 'district':
 				case 'pincode':
 				case 'state':

@@ -64,11 +64,16 @@
 
 ## Extra Security/Features
 
-1. Robust Against empty request. ✅ (Add GIF)
-![empty-request](https://github.com/madhavanand-github/address-formatter/blob/master/gif/empty-request.gif)
-2. Check if field's name are correct. ✅ (Add GIF)
-![field-name-checker](https://github.com/madhavanand-github/address-formatter/blob/master/gif/empty-request-checker.gif)
-3. Log/Audit of API working in console. ✅ (Add GIF)
+1. Robust Against empty request. ✅  
+
+![empty-request](https://github.com/madhavanand-github/address-formatter/blob/master/gif/empty-request.gif)  
+
+2. Check if field's name are correct. ✅  
+
+![field-name-checker](https://github.com/madhavanand-github/address-formatter/blob/master/gif/field-request-checker.gif)
+
+3. Log/Audit of API working in console. ✅    
+
 ![empty-request](https://github.com/madhavanand-github/address-formatter/blob/master/gif/log.gif)
 
 ## Approach Video

@@ -1,7 +1,7 @@
 # Address Formatter API
 
 Accurate as Google and format as it should
-![Approach](http://octodex.github.com/images/minion.png)
+![Approach](https://github.com/madhavanand-github/address-formatter/blob/master/img/approach.jpg)
 
 ## Step to Run Locally
 

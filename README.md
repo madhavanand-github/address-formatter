@@ -4,7 +4,7 @@
 
 ## 🛑 Disclaimer
 Due to team limitations & single member contribution, integeration of all these modules/features are standlone and main module is having bug(tried fixing for 8 hrs but couldn't do it). Future little support can this real.
-I request you to please watch this video ➡️ ![concept-concern-video](https://youtu.be/ffqgxQtE5mA)  
+I request you to please watch this video ➡️ [concept-concern-video](https://youtu.be/ffqgxQtE5mA)  
 
 ## 1️⃣ Step to Run Locally
 

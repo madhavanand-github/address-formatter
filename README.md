@@ -1,6 +1,7 @@
 # Address Formatter API
 
-Address Formatter API for UIDAI Hackathon(Add GIF + Photo)
+Accurate as Google and format as it should
+![Approach](http://octodex.github.com/images/minion.png)
 
 ## Step to Run Locally
 
@@ -37,11 +38,11 @@ Address Formatter API for UIDAI Hackathon(Add GIF + Photo)
 ## Handling of Edge/Boundary Cases
 
 1. Non Availabilty of Some of the Address Components (Like Locality, Sub-District) ✅ (Add GIF)
-2. Repetitive Components. 🔁
-3. Extreme Repetitive Components. 🔁
-4. Handling of Minor Spelling Mistakes in English.
+2. Repetitive Components. ✅
+3. Extreme Repetitive Components. ✅
+4. Handling of Minor Spelling Mistakes in English. ✅ 🪲
 5. Availability of Special Characters. ✅
-6. Handling of Local Language Address. 
+6. Handling of Local Language Address. ✅ 🪲
 
 ## Extra Security/Features
 

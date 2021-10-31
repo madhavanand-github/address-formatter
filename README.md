@@ -1,16 +1,15 @@
 # Address Formatter API
 
-Accurate as Google and format as it should
 ![Approach](https://github.com/madhavanand-github/address-formatter/blob/master/img/approach.jpg)
 
-## Step to Run Locally
+## Step to Run Locally ✅
 
 1. Clone the repository `git clone https://github.com/madhavanand-github/address-formatter.git`
 2. Run `npm i` or `npm install` to install all dependencies.(Ensure NodeJS & NPM are pre-installed)
 3. Start the server `node app.js` or `nodemon app.js`;
 4. Send a `POST` request via `Postman` or `Thunder Client - VSCode Extension` on URL `localhost:3000/format-address`
 
-## Request Format
+## Request Format ✅
 
 ```json
 {
@@ -28,12 +27,31 @@ Accurate as Google and format as it should
 
 > 🛑 In the request body, any number of fields in any order among only above mention fields are accepted in lowercase(`state` instead of `State`) in JSON.
 
-## Response Format
+## Response Format ✅
 
-## Dependencies
+```json
+{
+	"building" : ,
+	"street" : ,
+	"locality" : ,
+	"landmark" : ,
+	"vtc" : ,
+	"subdistrict" : ,
+	"district" : ,
+	"pincode" : ,
+	"state" : ,
+	"single-string-address" :
+}
+```
+
+> 🛑 Response will include all the fields sent in request body along with an additional `single-string-address` field & repetitive fields will be assigned `null` in JSON.
+
+## Dependencies ✅
 
 1. `nodemon` - For ease in developement.
 2. `express` - Backend Framework to build API.
+3. `google-search-results-nodejs` - To fix local language address & spelling mistake. (by serpapi.com )
+4. `serp` - Optional as an alternate to 3rd, if we want to deploy our own.
 
 ## Handling of Edge/Boundary Cases
 
@@ -47,10 +65,13 @@ Accurate as Google and format as it should
 ## Extra Security/Features
 
 1. Robust Against empty request. ✅ (Add GIF)
-2. Check if fields are correct or complaint. ✅ (Add GIF)
+![empty-request](https://github.com/madhavanand-github/address-formatter/blob/master/gif/empty-request.gif)
+2. Check if field's name are correct. ✅ (Add GIF)
+![field-name-checker](https://github.com/madhavanand-github/address-formatter/blob/master/gif/empty-request-checker.gif)
 3. Log/Audit of API working in console. ✅ (Add GIF)
+![empty-request](https://github.com/madhavanand-github/address-formatter/blob/master/gif/log.gif)
 
-## Approach Video & Presenatation
+## Approach Video
 
 
 ## Deployment

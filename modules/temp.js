@@ -16,8 +16,19 @@ let finalObj = {
 	"street" : "hard",
 };
 
-console.log(finalObj.Building == undefined);
+// let ans = "madhav   andnd";
+// console.log(ans.replace((\\s+/)/g," "));
 
+
+let string = "opp,Silk Exchange Board";
+console.log(string.replace(/#/g,"").trim().replace(/\s+/g," ").toLowerCase());
+
+function stringBreaker(string){
+	let newString = string.replace(/#/g,"").trim().replace(/\s+/g," ").toLowerCase();
+	return newString.split(/[\s,]+/);
+}
+
+console.log(stringBreaker(string));
 // 5. Check - type of fields --DUMP--
 function isFieldType(req, res){
 

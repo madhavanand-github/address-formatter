@@ -52,7 +52,7 @@ module.exports.fieldTypeParser = function fieldTypeParser(req, res, next){
 }
 
 // Parses Unique and Soft Fields
-module.exports.uniqueSoft = function uniqueSoft(req, res){
+module.exports.uniqueSoft = function uniqueSoft(req, res, next){
 
 	// Unique Field Processing
 	if(uniqueFields.length != 0){
@@ -81,10 +81,21 @@ module.exports.uniqueSoft = function uniqueSoft(req, res){
 	}
 		
 	console.log(finalObj);
-	res.send("All is well 😀");
+	next();
 }
 
+// Parses the hard Fields	
+module.exports.hardParser = function hardParser(req, res){
 
+	if(hardFields.length != 0){
+		for(let index in hardFields){
+			let temp = stringBreaker(finalObj[hardFields[index]]);
+			console.log(temp);
+		}
+	}
+	
+	res.send("All is well 😀");
+}
 
 // This normalize the string & split it.
 function stringBreaker(string){

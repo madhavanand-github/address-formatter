@@ -51,3 +51,8 @@ Address Formatter API for UIDAI Hackathon(Add GIF + Photo)
 
 ## Approach Video & Presenatation
 
+
+## Deployment
+
+1. [Format-Address-Heroku](https://format-address.herokuapp.com/)
+2. [Git-Heroku](https://git.heroku.com/format-address.git)

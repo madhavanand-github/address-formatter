@@ -4,7 +4,7 @@
 
 ## 🛑 Disclaimer
 Due to team limitations & single member contribution, integeration of all these modules/features are standlone and main module is having bug(tried fixing for 8 hrs but couldn't do it). Future little support can this real.
-I request you to please watch this video ➡️ ![concept-concern-video](https://github.com/madhavanand-github/address-formatter/blob/master/gif/empty-request.gif)  
+I request you to please watch this video ➡️ ![concept-concern-video](https://youtu.be/ffqgxQtE5mA)  
 
 ## 1️⃣ Step to Run Locally
 
@@ -94,4 +94,4 @@ I request you to please watch this video ➡️ ![concept-concern-video](https:/
 ## 8️⃣ Deployment
 
 1. [Format-Address-Heroku](https://format-address.herokuapp.com/)
-2. [Git-Heroku](https://git.heroku.com/format-address.git)
+2. 🛑 This won't return the reponse as expected due to module failure.

@@ -70,7 +70,7 @@
 
 2. Check if field's name are correct. ✅  
 
-![field-name-checker](https://github.com/madhavanand-github/address-formatter/blob/master/gif/field-request-checker.gif)
+![field-name-checker](https://github.com/madhavanand-github/address-formatter/blob/master/gif/field-name-checker.gif)
 
 3. Log/Audit of API working in console. ✅    
 

@@ -1,5 +1,4 @@
 const serpApi = require('google-search-results-nodejs');
-const search = new serpApi.GoogleSearch("e96ac5d32ce0c1c05f9d195f04dbccb1a25ceb45f4d7f5726bc0435fdbd4eaa8");
 
 // Global hard, soft & unique fields
 let fieldType = {
